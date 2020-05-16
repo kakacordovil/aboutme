@@ -1,13 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
- 
-    font-family: Helvetica;
+    font-family: 'Ramabhadra', sans-serif;
+    /*font-family: Helvetica;*/
     font-size: large;
     height: 100vh;
   }
     
    .bg-image {
      
-     background-image: url('https://images3.alphacoders.com/829/thumb-1920-829193.jpg');
+    background-image: url('../img/kaka-cordovil-bg.jpg');
     background-size: auto;
     
     filter: blur(2px);
@@ -15,13 +21,35 @@ body {
     height: 900px; 
   
   }
+
+  @media (min-width: 600px) {
+    body{
+      font-size: 12px;
+    }
+  }
     
+  @media (min-width: 1200px) {
+    body{
+      font-size: 20px;
+    }
+  }
+    
+
   header{
-      background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-    color: white;
+
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    
+
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+
+    color: #fafaff;
     font-weight: bold;
-    border: 3px solid #f1f1f1;
+    /*border: 3px solid #f1f1f1;*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,12 +59,30 @@ body {
     padding: 20px;
     text-align: center;
   }
-  }
-  
-  
+
+
+
   .menu {
     background-color: none;
+    position: fixed;
+    width: 100vw;
+    top: 20px;
+    z-index: 1;
   }
+
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: backgraund-color 1s, color 2s;
+    /*background-color: rgb(0,0,0);
+*/
+    }
+
+  .menu a:hover {
+    background-color: #B3E5FC;
+    color: rgb(3, 108, 122);
+
+    }
   
   .menu ul {
     display: flex;
@@ -56,6 +102,25 @@ body {
     color: #4DD0E1
   }
   
+  .titles {
+    transform: scale(0.2) translateY(100vh);
+    opacity: 0;
+
+    animation: linear 2S titleMotion forwards;
+  }
+
+  @keyframes titleMotion {
+    0% {
+      transform: scale(0.2) translateY(50vh);
+      opacity: 0;
+    }
+    
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+
   .subtitle,
   .title {
     color: #fafaff;
@@ -65,8 +130,88 @@ body {
   .title {
      max-width: 880px;
      text-align: center;
-     font-size: 90px;
+     font-size: 8em;
      margin: 60px auto;
+
+  }
+
+  .contatc,
+  .portfolio {
+    padding: 2m;
+    min-height: 100vh;
+  }
+
+  .contatc h2,
+  .portfolio h2 {
+    font-family: Helvetica, sans-serif;
+    color: #f81c66;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-bottom: 1em;
+    font-size: 8em;
   }
   
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 240px 240px;
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: repeat (3, 260px);
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 8em -48px);
+    }
+  }
+
+  .portfolio figure {
+    text-align: center;
+  }
+
+
+  .img-portfolio {
+      height: 180px;
+      width: 180px;
+      object-fit: cover;
+      object-position: left bottom;
+      border-radius: 50%;
+      transition: transform 500ms;
+      
+  }
+
+  .img-portfolio:hover {
+      transform: scale(1.2);
+  } 
+  .contatc .icons {
+   text-align: center; 
+  }
+
+  .contatc a {
+    color: fuchsia;
+    font-size: 10em;
+  }
+  
+  .contatc a:active,
+  .contatc a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 8px #2222cc56;
+    color: #f583ef;
+  }
+
+  @media (min-width: 1200px) {
+    .img-portfolio {
+      height: 10em;
+      width: auto;
+    }
+  }
+
+
   

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +10,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Ramabhadra&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/c4a535f47e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,17 +19,74 @@
     <header>
         <nav class="menu">
             <ul>
-                <li><a href="#">About </a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/kakacordovil">Portfolio </a>
+                <li><a href="#about">About </a></li>
+                <li><a target="_blank" rel="noopener noreferrer" href="#portoflio">Portfolio </a>
                 </li>
                 <li><a target="_blank" rel="noopener noreferrer"
-                        href="https://javanaoecafe.wordpress.com/contato/">Contact </a></li>
+                        href="#contact">Contact </a></li>
             </ul>
         </nav>
-        <h1 class="title">Kaká Cordovil</h1>
-        <h2 class="subtitle">Junior FullStack Developer </h2>
+        <div class="titles">
+            <h1 class="title">Kaká Cordovil</h1>
+            <h2 class="subtitle">Junior FullStack Developer </h2>
+        </div>
+        
 
     </header>
+
+    <section class="about">
+      <h2>About</h2>
+
+      <figure>
+        <img src="" alt="">
+      </figure>
+    </section>
+
+    <section class="portfolio" id="portoflio">
+        <h2>Portfólio</h2>
+
+        <div class="grid">
+          <figure>
+            <img class="img-portfolio" src="./img/ticketsy image orange.png" alt="eCommerce">
+            <figcaption>eCommerce</figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/ticketsy image orange.png" alt=">Mobile">
+            <figcaption>Mobile</figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/ticketsy image orange.png" alt="Web design">
+            <figcaption>Web design</figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./img/ticketsy image orange.png" alt="Projetos pessoais">
+            <figcaption>Projetos pessoais</figcaption>
+          </figure>
+        </div>
+        
+      </section>
+
+      <section class="contatc">
+        <h2>Contact</h2>
+          <div class="grid icons">
+          <a target="_blank" href="https://github.com/kakacordovil">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://twitter.com/desblogada">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/kakacordovil">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/w3c.code/">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:javanaoecafe@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+          
 
 
 </body>
