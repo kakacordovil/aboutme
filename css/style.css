@@ -1,3 +1,4 @@
+/* soft reset do css */
 * {
   margin: 0;
   padding: 0;
@@ -5,29 +6,33 @@
 }
 
 body {
-  font-family: "Ramabhadra", sans-serif;
-  /*font-family: Helvetica;*/
-  font-size: large;
+  background-image: url('../img/jason-leung-F2WX4BTIkpQ-unsplash.jpg');
+  background-size: auto 100vh; 
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
+  font-size: 12px;
 }
 
-.bg-image {
-  background-image: url(../img/jason-leung-F2WX4BTIkpQ-unsplash.jpg);
-  background-size: auto;
-
-  /*filter: blur(2px);
-*/
-  height: 100vh;
-}
-
-@media (min-width: 600px) {
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
 @media (min-width: 1200px) {
   body {
+   
     font-size: 20px;
   }
 }
@@ -35,45 +40,16 @@ body {
 header {
   height: 100vh;
   display: flex;
-  width: 100vw;
   justify-content: center;
   align-items: center;
-
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-
-  color: #fafaff;
-  font-weight: bold;
-  /*border: 3px solid #f1f1f1;*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
 }
 
 .menu {
-  background-color: none;
+  background-color: white;
   position: fixed;
   width: 100vw;
-  top: 20px;
+  top: 0;
   z-index: 1;
-}
-
-.menu a {
-  display: block;
-  padding: 10px 20px;
-  transition: backgraund-color 1s, color 2s;
-  /*background-color: rgb(0,0,0);
-*/
-}
-
-.menu a:hover {
-  background-color: #b3e5fc;
-  color: rgb(3, 108, 122);
 }
 
 .menu ul {
@@ -82,56 +58,70 @@ header {
 }
 
 .menu li {
-  list-style: none;
+ list-style: none; 
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: white;
 }
 
 a {
-  color: #b3e5fc;
+  color: teal;
   text-decoration: none;
 }
 
 a:hover {
-  color: #4dd0e1;
+  text-decoration: underline;
 }
 
 .titles {
-  transform: scale(0.2) translateY(100vh);
+  transform: scale(0.2) translateY(50vh);
   opacity: 0;
-
-  animation: linear 2s titleMotion forwards;
+  animation: 1s ease 500ms animacaoTitulo forwards;
 }
 
-@keyframes titleMotion {
-  0% {
+@keyframes animacaoTitulo {
+  from {
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
   }
-
-  100% {
+  to {
     transform: scale(1) translateY(0);
     opacity: 1;
   }
 }
 
-.subtitle,
-.title {
-  color: #fafaff;
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
   text-align: center;
 }
 
-.title {
-  max-width: 880px;
-  text-align: center;
-  font-size: 8em;
-  margin: 60px auto;
+.site-title {
+  font-size: 4em;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.site-subtitle {
+ font-style: italic;
+ font-family: 'Press Start 2P', cursive;
+ line-height: 1.8em;
 }
 
 .about,
-.contatc,
+.contact,
 .portfolio {
-  padding: 2m;
+  padding: 2em;
   min-height: 100vh;
-  }
+}
 
 @media (min-width: 1200px) {
   .container {
@@ -142,48 +132,48 @@ a:hover {
 }
 
 .about h2,
-.contatc h2,
+.contact h2,
 .portfolio h2 {
-  font-family: Helvetica, sans-serif;
-  color: #f81c66;
-  margin-top: 1em;
-  margin-left: 0.5em;
-  margin-bottom: 1em;
-  font-size: 8em;
-}
-
-.about h3 {
-  font-family: Helvetica, sans-serif;
-  color: #070002;
-  margin-top: 1em;
-  margin-left: 0.5em;
-  margin-bottom: 1em;
-  font-size: 3em;
-}
-
-.about p {
-  font-family: Helvetica, sans-serif;
-  color: #070002;
-  /*    text-indent: 1em;*/
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-bottom: 1em;
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
   font-size: 2em;
 }
 
-.about .avatar {
-  float: left;
-  height: 10px;
-  width: 10px;
-  margin-left: 1em;
- }
+.about p {
+  color: white;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
 
+.about a {
+  color: white;
+  text-decoration: underline;
+}
+
+.about a:hover {
+  background-color: cyan;
+  text-decoration: none;
+  color: magenta;
+}
+
+.about .avatar {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+  .about .avatar {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    float: right;
+  }
+}
 
 
 .portfolio .grid {
   display: grid;
   gap: 2em;
-  grid-template-columns: 240px 240px;
 }
 
 @media (min-width: 560px) {
@@ -194,11 +184,45 @@ a:hover {
 
 @media (min-width: 880px) {
   .portfolio .grid {
-    grid-template-columns: repeat (3, 260px);
-    align-items: center;
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
     justify-content: center;
-    height: calc(100vh - 8em -48px);
+    height: calc(100vh - 8em - 48px);
   }
+}
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
 }
 
 .portfolio figure {
@@ -207,35 +231,28 @@ a:hover {
 
 .img-portfolio {
   height: 180px;
-  width: 180px;
+  width: 100%;
   object-fit: cover;
   object-position: left bottom;
-  border-radius: 50%;
   transition: transform 500ms;
 }
 
-.img-portfolio:hover {
-  transform: scale(1.2);
-}
-.contatc .icons {
+/* .img-portfolio:hover {
+  transform: scale(1.2) rotate(-2deg);
+} */
+
+.contact .icons {
   text-align: center;
 }
 
-.contatc a {
-  color: fuchsia;
-  font-size: 10em;
+.contact a {
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 1s;
 }
 
-.contatc a:active,
-.contatc a:hover {
+.contact a:active,
+.contact a:hover  {
   text-decoration: none;
-  text-shadow: 0px 0px 8px #2222cc56;
-  color: #f583ef;
-}
-
-@media (min-width: 1200px) {
-  .img-portfolio {
-    height: 10em;
-    width: auto;
-  }
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
 }
