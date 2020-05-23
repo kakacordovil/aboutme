@@ -1,19 +1,43 @@
-/* soft reset do css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  /* background-image: url('https://www.freecodecamp.org/news/content/images/2020/05/heart.jpg');
-  background-size: auto 100vh; font-size: 12px;
-  */
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  height: 100vh;
+.bg {
+ 
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://www.freecodecamp.org/news/content/images/2020/05/heart.jpg") no-repeat center;
+  height: 1000px;
+  min-width: 100%;
+  background-size: cover;
+  position: relative;
+  
 }
 
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  height: 100vh;
+  color: #fafaff;
+  background-color: #ffffff;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/*END TO RESET FOR JS*/
+
+
+/*
 .hero {
     position: relative;
 }
@@ -36,22 +60,8 @@ body {
   transform: translate(-50%, -50%);
   color: white;
 }
+*/
 
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
-}
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
 @media (min-width: 400px) {
   body {
@@ -75,43 +85,289 @@ body {
   }
 }
 
-.menu {
+.nav-bar {
   background-color: none;
+  font-size: 1.3em;
+   
   position: fixed;
+  height: 2em;
   width: 100vw;
   top: 0;
   z-index: 1;
 }
 
-.menu ul {
+.nav-bar ul {
   display: flex;
   justify-content: space-around;
 }
 
-.menu li {
+.nav-bar li {
   list-style: none;
 }
 
-.menu a {
+.nav-bar a {
+  color: #a7a5a5;
   display: block;
   padding: 10px 20px;
   transition: background-color 1s, color 1s;
 }
 
-.menu a:active,
-.menu a:hover {
+.nav-bar a:active,
+.nav-bar a:hover {
   background-color: rgb(228, 228, 228);
-  color: white;
+  color: rgb(255, 7, 123);
 }
 
 a {
-  color: rgb(228, 236, 236);
+  color: rgb(37, 37, 37);
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
+
+
+/*
+_______________________________________
+JAVASCRIP ANIMATION
+_______________________________________
+*/
+
+.cd-title {
+  position: relative;
+  height: 160px;
+  line-height: 290px;
+  text-align: center;
+}
+.cd-title h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.cd-title h2 {
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-title {
+    line-height: 250px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-title {
+    height: 200px;
+    line-height: 300px;
+  }
+  .cd-title h1 {
+    font-size: 3rem;
+  }
+}
+
+.cd-intro {
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+  position: relative;
+  padding-top: 20rem;
+  
+}
+
+.cd-intro {
+  margin: 0em auto;
+  
+}
+@media only screen and (min-width: 768px) {
+  .cd-intro {
+    margin: 0em auto;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-intro {
+    margin: 0em auto;
+  }
+}
+.cd-headlinetitle {
+  font-size: 8rem;
+  line-height: 1.2;
+  width: 100%;
+  text-align: center;
+}
+.cd-headline {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 2.8rem;
+  line-height: 1.8em;
+  letter-spacing: 0.2px;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 3rem;
+    line-height: 1.8em;
+    letter-spacing: 0.2px;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 3.6rem;
+    line-height: 1.8em;
+    letter-spacing: 0.2px;
+  }
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+.cd-headline.type .cd-words-wrapper {
+  vertical-align: top;
+  overflow: hidden;
+}
+.cd-headline.type .cd-words-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 90%;
+  width: 1px;
+  background-color: #ffb91d;
+}
+.cd-headline.type .cd-words-wrapper.waiting::after {
+  -webkit-animation: cd-pulse 1s infinite;
+  -moz-animation: cd-pulse 1s infinite;
+  animation: cd-pulse 1s infinite;
+}
+.cd-headline.type .cd-words-wrapper.selected {
+  background-color: #aebcb9;
+}
+.cd-headline.type .cd-words-wrapper.selected::after {
+  visibility: hidden;
+}
+.cd-headline.type .cd-words-wrapper.selected b {
+  color: #0d0d0d;
+}
+.cd-headline.type b {
+  visibility: hidden;
+}
+.cd-headline.type b.is-visible {
+  visibility: visible;
+}
+.cd-headline.type i {
+  position: absolute;
+  visibility: hidden;
+}
+.cd-headline.type i.in {
+  position: relative;
+  visibility: visible;
+}
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes cd-pulse {
+  0% {
+    -moz-transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -moz-transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+    -moz-transform: translateY(-50%) scale(0.9);
+    -ms-transform: translateY(-50%) scale(0.9);
+    -o-transform: translateY(-50%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+    -moz-transform: translateY(-50%) scale(0);
+    -ms-transform: translateY(-50%) scale(0);
+    -o-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+/*
+JS ANIMATION END
+*/
+
+.btn-hire {
+  background-color: rgba(245, 79, 143, 0.678); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.8em;
+  width: 40%;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn-hire:hover {
+  background-color: rgb(212, 0, 212);
+  color: rgb(245, 79, 143);
+}
+
+/*
 
 .titles {
   transform: scale(0.2) translateY(50vh);
@@ -147,6 +403,8 @@ a:hover {
   line-height: 1.8em;
 }
 
+*/
+
 .about,
 .contact,
 .portfolio {
@@ -168,7 +426,7 @@ a:hover {
   font-family: 'Open Sans', sans-serif;
   color: rgb(24, 23, 23);
   margin-bottom: 1.5em;
-  font-size: 2em;
+  font-size: 6em;
 }
 
 .about p {
@@ -203,7 +461,7 @@ a:hover {
 
 .portfolio .grid {
   display: grid;
-  gap: 2em;
+  gap: 6em;
 }
 
 @media (min-width: 560px) {
@@ -223,7 +481,7 @@ a:hover {
 
 .flip-card {
   height: 180px;
-  perspective: 1000px;
+  perspective: 2000px;
 }
 
 .flip-card:hover .card {
@@ -260,7 +518,7 @@ a:hover {
 }
 
 .img-portfolio {
-  height: 180px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
   object-position: left bottom;
@@ -277,12 +535,12 @@ a:hover {
 
 .contact a {
   color: rgb(24, 23, 23);
-  font-size: 4em;
+  font-size: 5em;
   transition: text-shadow 1s;
 }
 
 .contact a:active,
 .contact a:hover {
   text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 20px rgba(250, 0, 217, 0.76);
 }

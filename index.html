@@ -7,25 +7,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kaka Cordovil</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
   <link rel="stylesheet" href="css/style.css">
+
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Ramabhadra&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Merriweather:wght@700&family=Monofett&family=Raleway:wght@300&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/c4a535f47e.js" crossorigin="anonymous"></script>
+
+
+  <script src="script/script.js"></script>
+
+
 
 </head>
 
 <body>
 
   <header>
-    <nav class="menu">
+    <nav class="nav-bar">
       <ul>
         <li><a href="#about">About </a></li>
         <li><a href="#portoflio">Portfolio </a></li>
@@ -39,31 +46,41 @@
       </ul>
     </nav>
   </header>
+  <div class="bg">
+    <section class="cd-intro">
 
-    <div class="hero-image">
-      <div class="hero-text">
-        <h1>I am Kaká Cordovil</h1>
-        <p>and I'm a Junior Java Developer</p>
-        <button>Hire me</button>
-      </div>
+      <h1 class="cd-headlinetitle letters type">KAKÁ CORDOVIL</h1>
+      <h2 class="cd-headline letters type">
+        <span>I am a </span>
+        <span class="cd-words-wrapper waiting">
+          <b class="is-visible">Junior Java Developer</b>
+          <b>Junior FullStack Developer</b>
+          <b>icamiaba warrior</b>
+        </span>
+      </h2>
+      <br>
+      <button class="btn-hire" id="btn-hire" type="button"><a target="_blank" rel="noopener noreferrer" href="mailto:javanaoecafe@gmail.com?subject=Hey Kaká, come to work with us!">Hire me</a> </button>
+    </section>
+
   </div>
 
   <section class="about" id="about">
     <h2>About</h2>
     <figure class="avatar">
-      <img src="img/profile kaka cordovil github java fullstack.jpeg" alt="kaka cordovil">
+      <img src="img/profile kaka cordovil github java fullstack.jpeg" alt="kaká cordovil">
     </figure>
-    
+
     <p>
       Icamiaba in tech
       [Icamiaba (i + kama + îaba): legendary Indian warriors who came to be known as the Amazons, an ancient nation of
-      female warriors from Greek mythology] 
+      female warriors from Greek mythology]
     </p>
     <p>
       Web Developer, Java Junior, Junior Fullstack Developer - is what you'll read in my business card and what I like
       to do, by design. However, my resumé greatly exceeds any professional definition.
     </p>
-    <p>Once you get to know me, you'll find out about my passion for knowledge and my belief that we should always strive
+    <p>Once you get to know me, you'll find out about my passion for knowledge and my belief that we should always
+      strive
       for self-betterment. Learning is a loop - the more you learn, the more you feel the need to keep going. Far from a
       problem, this is a rather incredible challenge.
     </p>
@@ -82,22 +99,57 @@
     <h2>Portfólio</h2>
 
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/ticketsy image orange.png" alt="ticketsy logo">
-        <figcaption>Hackaton</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/Pc Grodno.png" alt="Web Page Pc Grodno">
-        <figcaption>Web Page</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/kubrik.png" alt=">kubrik logo art">
-        <figcaption>Kubrik- brick distroyer</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/100daysofcode.png" alt="100 days of code challenge">
-        <figcaption>100 days of code</figcaption>
-      </figure>
+      <div class="flip-card">
+        <div class="card">
+          <figure>
+            <img class="img-portfolio" src="./img/ticketsy image orange.png" alt="ticketsy logo">
+            <figcaption>Hackaton</figcaption>
+          </figure>
+          <div class="card-back">
+            <h3>Hackaton</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card">
+        <div class="card">
+          <figure>
+            <figure>
+              <img class="img-portfolio" src="./img/Pc Grodno.png" alt="Web Page Pc Grodno">
+              <figcaption>Web Page</figcaption>
+            </figure>
+            <div class="card-back">
+              <h3>Web Page</h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure>
+            <figure>
+              <img class="img-portfolio" src="./img/100daysofcode.png" alt="100 days of code challenge">
+              <figcaption>100 days of code</figcaption>
+            </figure>
+            <div class="card-back">
+              <h3>100 days of code</h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="card">
+          <figure>
+            <figure>
+              <img class="img-portfolio" src="./img/kubrik.png" alt=">kubrik logo art">
+              <figcaption>Kubrik- brick distroyer</figcaption>
+            </figure>
+            <div class="card-back">
+              <h3>Kubrik- brick distroyer</h3>
+            </div>
+        </div>
+      </div>
     </div>
 
   </section>
