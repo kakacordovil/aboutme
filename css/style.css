@@ -190,14 +190,14 @@ _______________________________________
   }
 }
 .cd-headlinetitle {
-  font-size: 8rem;
+  font-size: 6rem;
   line-height: 1.2;
   width: 100%;
   text-align: center;
 }
 .cd-headline {
   font-family: 'Cutive Mono', monospace;
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1.8em;
   letter-spacing: 0.2px;
   width: 100%;
@@ -357,7 +357,7 @@ JS ANIMATION END
   line-height: 1.8em;
   width: 40%;
   display: inline-block;
-  font-size: 30px;
+  font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
 }
@@ -511,7 +511,7 @@ JS ANIMATION END
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.7);
   height: 220px;
-  width: 100%;
+  width: auto;
   transform: rotateY(180deg);
 }
 
