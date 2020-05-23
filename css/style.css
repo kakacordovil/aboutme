@@ -106,7 +106,7 @@ a {
 }
 
 .nav-bar a {
-  color: #a7a5a5;
+  color: #dadada;
   display: block;
   padding: 10px 20px;
   transition: background-color 1s, color 1s;
@@ -119,7 +119,7 @@ a {
 }
 
 a {
-  color: rgb(37, 37, 37);
+  color: rgb(201, 201, 201);
   text-decoration: none;
 }
 
@@ -363,7 +363,7 @@ JS ANIMATION END
 }
 
 .btn-hire:hover {
-  background-color: rgb(212, 0, 212);
+  background-color: rgb(37, 37, 37);
   color: rgb(245, 79, 143);
 }
 
@@ -430,6 +430,8 @@ JS ANIMATION END
 }
 
 .about p {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 3rem;
   color: rgb(24, 23, 23);
   text-indent: 1.4em;
   margin-bottom: 1.4em;
@@ -448,13 +450,13 @@ JS ANIMATION END
 }
 
 .about .avatar {
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: circle(38% at 50% 50%);
   margin-left: 2em;
 }
 
 @media (min-width: 600px) {
   .about .avatar {
-    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    clip-path: circle(38% at 50% 50%);
     float: right;
   }
 }
@@ -475,12 +477,12 @@ JS ANIMATION END
     grid-template-columns: repeat(3, 260px);
     align-content: center;
     justify-content: center;
-    height: calc(100vh - 8em - 48px);
+    height: calc(100vh - 8em - 80px);
   }
 }
 
 .flip-card {
-  height: 180px;
+  height: 200px;
   perspective: 2000px;
 }
 
@@ -508,7 +510,7 @@ JS ANIMATION END
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.7);
-  height: 180px;
+  height: 220px;
   width: 100%;
   transform: rotateY(180deg);
 }
@@ -542,5 +544,20 @@ JS ANIMATION END
 .contact a:active,
 .contact a:hover {
   text-decoration: none;
-  text-shadow: 0px 0px 20px rgba(250, 0, 217, 0.76);
+  font-size: 5.5em;
+  text-shadow: 0px 0px 30px rgba(250, 0, 217, 0.76);
+}
+
+footer,
+footer textarea{
+    font-family: Helvetica, sans-serif;
+    color: rgb(24, 23, 23);
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(255, 7, 123) !important;
 }
