@@ -10,6 +10,7 @@ JavaScript, HTML and CSS
 - Paulo Silveira for this Alura project.
 - Shalabh for always support me.
 - Rosita por su atención en mis momentos cuando nada funciona.
+- Filipe Mota for the remote breakfast debugging.
 - Renata for exist.
 - Dhanish for give me new css tips.
 
