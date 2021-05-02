@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #424242;
 }
 
 /*
@@ -144,7 +145,7 @@ _______________________________________
 .cd-title h1 {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #fff;
+  color: #424242;
 }
 
 .cd-title h2 {
