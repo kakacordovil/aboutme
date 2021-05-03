@@ -108,7 +108,7 @@ a {
 }
 
 .nav-bar a {
-  color: #01579b;
+  color: #424242;
   display: block;
   padding: 10px 20px;
   transition: background-color 1s, color 1s;
@@ -117,11 +117,11 @@ a {
 .nav-bar a:active,
 .nav-bar a:hover {
   background-color: #01579b;
-  color: #424242;
+  color: #bdbdbd;
 }
 
 a {
-  color: #01579b;
+  color: #424242;
   text-decoration: none;
 }
 
