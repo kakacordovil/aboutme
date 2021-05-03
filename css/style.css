@@ -89,7 +89,7 @@ a {
 
 .nav-bar {
   background-color: none;
-  font-size: 1em;
+  font-size: 0.8em;
    
   position: fixed;
   height: 2em;
@@ -108,7 +108,7 @@ a {
 }
 
 .nav-bar a {
-  color: #dadada;
+  color: #01579b;
   display: block;
   padding: 10px 20px;
   transition: background-color 1s, color 1s;
