@@ -89,7 +89,7 @@ a {
 
 .nav-bar {
   background-color: none;
-  font-size: 1.3em;
+  font-size: 1em;
    
   position: fixed;
   height: 2em;
@@ -116,12 +116,12 @@ a {
 
 .nav-bar a:active,
 .nav-bar a:hover {
-  background-color: rgb(228, 228, 228);
-  color: rgb(255, 7, 123);
+  background-color: #01579b;
+  color: #424242;
 }
 
 a {
-  color: rgb(201, 201, 201);
+  color: #01579b;
   text-decoration: none;
 }
 
