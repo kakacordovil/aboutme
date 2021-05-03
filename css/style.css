@@ -427,16 +427,16 @@ JS ANIMATION END
 .contact h2,
 .portfolio h2 {
   font-family: 'Open Sans', sans-serif;
-  color: rgb(24, 23, 23);
+  color: #212121;
   margin-bottom: 1.5em;
-  font-size: 6em;
-  padding-top: 3rem;
+  font-size: 4em;
+  padding-top: 10rem;
 }
 
 .about p {
   font-family: 'Cutive Mono', monospace;
-  font-size: 3rem;
-  color: rgb(24, 23, 23);
+  font-size: 1.5rem;
+  color: #212121;
   text-indent: 1.4em;
   margin-bottom: 1.4em;
   text-align: unset;
