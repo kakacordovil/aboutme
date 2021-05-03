@@ -200,7 +200,7 @@ _______________________________________
 }
 .cd-headline {
   font-family: 'Cutive Mono', monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.8em;
   letter-spacing: 0.2px;
   width: 100%;
@@ -208,7 +208,7 @@ _______________________________________
 }
 @media only screen and (min-width: 768px) {
   .cd-headline {
-    font-size: 3rem;
+    font-size: 1.5rem;
     line-height: 1.8em;
     letter-spacing: 0.2px;
     font-weight: 300;
@@ -216,7 +216,7 @@ _______________________________________
 }
 @media only screen and (min-width: 1170px) {
   .cd-headline {
-    font-size: 3.6rem;
+    font-size: 2rem;
     line-height: 1.8em;
     letter-spacing: 0.2px;
   }
